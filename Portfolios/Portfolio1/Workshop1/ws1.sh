@@ -9,7 +9,7 @@ echo "Bash Script is created to check the  status of your git repository."
 gitRepoFilePath=$1
 if [ -d "$gitRepoFilePath" ] || [ -d "$gitRepoFilePath/.git" ]
 then
-	echo "Provided repository file path is ${gitRepoFilePath}"
+	echo "Provided git repository file path is ${gitRepoFilePath}"
 else
 	echo "Its not a git repository"
 	repository="`pwd`"
@@ -20,7 +20,7 @@ echo "Total number of commit(s): $(git rev-list --count HEAD)"
 git log -1 --pretty=format:"Most recent commit details 
 AUTHOR INFORMATION
 	Author Name: %aN
-	Email: %ae
+	Author Email: %ae
 Comments: %s"
 
 
