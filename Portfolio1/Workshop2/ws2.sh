@@ -13,7 +13,7 @@ echo "${dashBorder2// /-}" >>output.txt
 
 uptime | awk -F '( |,|:)+' '{print "Uptime: ",$4,"days,",$6,"hours,",$7,"minutes"}' >>output.txt
 free -m | awk 'NR==2{printf "Memory Utilisation: %d%%\n", $3*100/$2}' >>output.txt
-
+uptime | awk '{print "CPU Load: ",$10}' >>output.txt
 
 dashBorder3=$(printf -- '-%.0s' {0..25})
 echo "${dashBorder3// /-}  End Report ${dashBorder3// /-}" >>output.txt
