@@ -12,8 +12,8 @@ then
 	echo "Provided git repository file path is ${gitRepoFilePath}"
 else
 	echo "Its not a git repository"
-	repository="`pwd`"
-	repository=$(git rev-parse --git-dir 2> /dev/null)
+	gitRepoFilePath="`pwd`"
+	gitRepoFilePath=$(git rev-parse --git-dir 2> /dev/null)
 	echo "Git repository file path: ${gitRepoFilePath}"
 fi
 echo "Total number of commit(s): $(git rev-list --count HEAD)"
