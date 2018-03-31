@@ -1,5 +1,6 @@
 ------------------------- System Report -------------------------
-Date: 31/03/18Time: 20:35:13                    Host Name e-tech
+Date: 31/03/18Time: 20:41:58                    Host Name e-tech
 -----------------------------------------------------------------
-Uptie:  13 days, 19 hours, 58 minutes
+Uptime:  58 days, 20 hours, 04 minutes
+Memory Utilisation: 96%
 --------------------------  End Report --------------------------
