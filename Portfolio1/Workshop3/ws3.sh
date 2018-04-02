@@ -8,8 +8,10 @@ echo "Detecting network location..."
 if ping -c 1 proxy.ecu.edu.au
 then
 	echo "You are on an ECU network"
+	#promt user for username and read username
 	read -p "Please enter your ECU username: "  username
-	read -s -p "please enter your ECU password: " password
+	#promt user for password and read securely
+	read -s -p "please enter your ECU password: " password; printf "\n"
 
 	#Proxy server turn on
 	if [ $(id -u) -ne 0 ]
@@ -33,7 +35,8 @@ then
 
   		cat ecu.t > /etc/environment
 
-		printf "Acquire::http::proxy \"http://$username:$password@$host:$port/\"\n"
+		printf \
+		"Acquire::http::proxy \"http://$username:$password@$host:$port/\"\n"
   		rm -rf ecu.t
 
 		echo "Your proxy has been set!" ; echo "You are \"online\""
